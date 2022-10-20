@@ -18,15 +18,15 @@ public class StoreTest {
     @Test
     public void testSearch() {
         Flower flowF = new Flower();
-        FlowerColor color1 = FlowerColor.RED;
-        flowF.setColor(color1);
+        FlowerColor colorF = FlowerColor.RED;
+        flowF.setColor(colorF);
 
         flowF.setPrice(MAX_SCORE);
         flowF.setSepalLength(MAX_SCORE_TWO);
 
         Flower flowS = new Flower();
-        FlowerColor color2 = FlowerColor.BLUE;
-        flowS.setColor(color2);
+        FlowerColor colorS = FlowerColor.BLUE;
+        flowS.setColor(colorS);
         flowS.setPrice(MAX_SCORE);
         flowS.setSepalLength(MAX_SCORE_TWO);
 
