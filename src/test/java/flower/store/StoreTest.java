@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Assertions;
 
 public class StoreTest {
     private Store store;
-    static final int MAX_SCORE = 100;
-    static final int MAX_SCORE_TWO = 123;
+//    static final int MAX_SCORE = 100;
+//    static final int MAX_SCORE_TWO = 123;
 
     @BeforeEach
     public void init() {
@@ -21,14 +21,14 @@ public class StoreTest {
         FlowerColor colorF = FlowerColor.RED;
         flowF.setColor(colorF);
 
-        flowF.setPrice(MAX_SCORE);
-        flowF.setSepalLength(MAX_SCORE_TWO);
+        flowF.setPrice(126);
+        flowF.setSepalLength(2324);
 
         Flower flowS = new Flower();
         FlowerColor colorS = FlowerColor.BLUE;
         flowS.setColor(colorS);
-        flowS.setPrice(MAX_SCORE);
-        flowS.setSepalLength(MAX_SCORE_TWO);
+        flowS.setPrice(126);
+        flowS.setSepalLength(2324);
 
         store.addFlow(flowF);
         Assertions.assertEquals(null, store.search(flowS));
