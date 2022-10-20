@@ -20,18 +20,19 @@ public class StoreTest {
         Flower flowF = new Flower();
         FlowerColor colorF = FlowerColor.RED;
         flowF.setColor(colorF);
-
-        flowF.setPrice(126);
-        flowF.setSepalLength(2324);
+        int MAX_RANDOM_NUMBER = 100;
+        int MAX_RANDOM_NUMBER_SECOND = 2324;
+        flowF.setPrice(MAX_RANDOM_NUMBER);
+        flowF.setSepalLength(MAX_RANDOM_NUMBER_SECOND);
 
         Flower flowS = new Flower();
         FlowerColor colorS = FlowerColor.BLUE;
         flowS.setColor(colorS);
-        flowS.setPrice(126);
-        flowS.setSepalLength(2324);
+        flowS.setPrice(MAX_RANDOM_NUMBER);
+        flowS.setSepalLength(MAX_RANDOM_NUMBER_SECOND);
 
         store.addFlow(flowF);
-        Assertions.assertEquals(null, store.search(flowS));
+        Assertions.assertNull(store.search(flowS));
         Assertions.assertEquals(flowF, store.search(flowF));
 
     }
