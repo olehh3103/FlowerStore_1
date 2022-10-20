@@ -4,19 +4,19 @@ package flower.store;
 import java.util.ArrayList;
 
 public class FlowerBucket {
-    private ArrayList<FlowerPack> all_flow;
+    private ArrayList<FlowerPack> allFlow;
     private double price;
 
-    public FlowerBucket(){
-        all_flow = new ArrayList<FlowerPack>();
+    public FlowerBucket() {
+        allFlow = new ArrayList<FlowerPack>();
     }
 
-    public void add(FlowerPack flow){
-        all_flow.add(flow);
+    public void add(FlowerPack flow) {
+        allFlow.add(flow);
         this.price += flow.getPrice();
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return this.price;
     }
 }
