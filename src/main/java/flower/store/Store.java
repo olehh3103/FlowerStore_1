@@ -14,7 +14,7 @@ public class Store {
     }
 
     public Flower search(Flower flow) {
-        for (Flower flowToCheck : this.allFlow){
+        for (Flower flowToCheck : this.allFlow) {
             if (flowToCheck.getFlowerType() == flow.getFlowerType()) {
                 if (flowToCheck.getPrice() == flow.getPrice()) {
                     if (flowToCheck.getSepalLength() == flow.getSepalLength()) {

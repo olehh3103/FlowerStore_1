@@ -2,13 +2,13 @@ package flower.store;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
-
 import org.junit.jupiter.api.Assertions;
 
 
 public class StoreTest {
     private Store store;
+    static final int MAX_SCORE = 100;
+    static final int MAX_SCORE_TWO = 123;
 
     @BeforeEach
     public void init() {
@@ -17,21 +17,22 @@ public class StoreTest {
 
     @Test
     public void testSearch() {
-        Flower flow1 = new Flower();
+        Flower flowF = new Flower();
         FlowerColor color1 = FlowerColor.RED;
-        flow1.setColor(color1);
-        flow1.setPrice(123);
-        flow1.setSepalLength(111);
+        flowF.setColor(color1);
 
-        Flower flow2 = new Flower();
+        flowF.setPrice(MAX_SCORE);
+        flowF.setSepalLength(MAX_SCORE_TWO);
+
+        Flower flowS = new Flower();
         FlowerColor color2 = FlowerColor.BLUE;
-        flow1.setColor(color2);
-        flow1.setPrice(123);
-        flow1.setSepalLength(111);
+        flowS.setColor(color2);
+        flowS.setPrice(MAX_SCORE);
+        flowS.setSepalLength(MAX_SCORE_TWO);
 
-        store.addFlow(flow1);
-        Assertions.assertEquals(null, store.search(flow2));
-        Assertions.assertEquals(flow1, store.search(flow1));
+        store.addFlow(flowF);
+        Assertions.assertEquals(null, store.search(flowS));
+        Assertions.assertEquals(flowF, store.search(flowF));
 
     }
 }
